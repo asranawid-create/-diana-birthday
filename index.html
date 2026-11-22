@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Diana 🎀</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;display:grid;place-items:center;
+ font-family:Tahoma,sans-serif;text-align:center;
+ background:linear-gradient(135deg,#fce4ec,#e8b8ca,#f8dce6);
+ color:#85445f;overflow:hidden;padding:20px
+}
+.card{
+ background:#fff9fceF;padding:35px 24px;
+ border-radius:28px;max-width:420px;width:100%;
+ box-shadow:0 15px 45px #8b456033;
+}
+.bow{font-size:55px}
+h1{color:#a34f70;font-size:28px}
+p{font-size:16px;line-height:2}
+button{
+ background:#ad5d7b;color:white;border:0;
+ padding:15px 30px;border-radius:30px;
+ font-size:17px;cursor:pointer
+}
+#message{display:none;animation:show 1s ease}
+.cake{font-size:65px}
+.heart{position:fixed;bottom:-30px;animation:float 8s linear infinite}
+@keyframes show{
+ from{opacity:0;transform:translateY(20px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="bow">🎀</div>
+<div id="start">
+<h1>دایانا جان! 🤍</h1>
+<p>یه سورپرایز قشنگ فقط برای تو دارم...</p>
+<button onclick="openGift()">بازش کن 🎁</button>
+</div>
+<div id="message">
+<div class="cake">🎂</div>
+<h1>تولدت مبارک دایانا! ❤️</h1>
+<p>
+امیدوارم تمام خوشی‌های دنیا سهم قلب مهربونت باشه،
+آرزوهای قشنگت یکی‌یکی به حقیقت بپیوندن
+و هیچ‌وقت لبخند از روی لبت محو نشه.
+<br>
+خوشحالم که به دنیا اومدی و خوشحال‌ترم
+که تو رو به‌عنوان رفیق دارم.
+<br><br>
+<strong>دوستت دارم، عزیزترینم! 🥹💗</strong>
+</p>
+</div>
+</div>
+<script>
+function openGift(){
+ document.getElementById("start").style.display="none";
+ document.getElementById("message").style.display="block";
+ for(let i=0;i<20;i++){
+  let h=document.createElement("span");
+  h.className="heart";
+  h.textContent="♥";
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDelay=Math.random()*4+"s";
+  h.style.fontSize=(15+Math.random()*25)+"px";
+  document.body.appendChild(h);
+ }
+}
+</script>
+</body>
+</html>
